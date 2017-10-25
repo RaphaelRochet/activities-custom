@@ -1,0 +1,13 @@
+{
+  "description": "Customize the Activities Button", 
+  "extension-id": "activities-custom", 
+  "gettext-domain": "activities-custom", 
+  "name": "Activities Customization", 
+  "settings-schema": "org.gnome.shell.extensions.activities-custom", 
+  "shell-version": [
+    "3.26"
+  ], 
+  "url": "", 
+  "uuid": "activities-custom@RaphaelRochet", 
+  "version": 1
+}
