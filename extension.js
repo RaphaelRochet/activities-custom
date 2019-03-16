@@ -6,7 +6,7 @@
 const Lang = imports.lang;
 
 const St = imports.gi.St;
-const Gtk = imports.gi.Gtk;
+const Gio = imports.gi.Gio;
 
 const Main = imports.ui.main;
 
@@ -17,7 +17,6 @@ const Customization = new Lang.Class({
 	Name: 'activites-custom',
 
 	_init : function() {
-		Gtk.IconTheme.get_default().append_search_path(Me.dir.get_child('icons').get_path());
 	},
 
 	enable: function() {
@@ -30,7 +29,8 @@ const Customization = new Lang.Class({
 		this._activitiesButton.actor.remove_actor(this._oldActor);
 
 		// We create a new Icon and put it in the button
-		this._icon = new St.Icon({icon_name: "activities-gnome-symbolic", style_class: 'activities-icon'});
+		let gicon = Gio.icon_new_for_string( Me.dir.get_child('icons').get_path() + "/activities-gnome-symbolic.svg" );
+		this._icon = new St.Icon({gicon: gicon, style_class: 'activities-icon'});
 		this._icon.set_style('icon-size: 1.5em;');
 		this._activitiesButton.actor.add_actor(this._icon);
 
