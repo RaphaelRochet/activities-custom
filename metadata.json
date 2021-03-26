@@ -5,9 +5,9 @@
   "name": "Activities Customization", 
   "settings-schema": "org.gnome.shell.extensions.activities-custom", 
   "shell-version": [
-    "3.32"
+    "40"
   ], 
   "url": "", 
   "uuid": "activities-custom@RaphaelRochet", 
-  "version": 2
+  "version": 3
 }
